@@ -36,8 +36,10 @@ export default function QuoteModal({ isOpen, onClose }) {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: 20 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
-                        className="relative z-10 bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden"
+                        className="relative z-10 bg-white rounded-2xl shadow-2xl w-full max-w-lg flex flex-col"
+                        style={{ maxHeight: '90vh' }} 
                     >
+                        {/* Sticky close button */}
                         <button
                             onClick={onClose}
                             className="absolute top-4 right-4 w-8 h-8 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center transition-colors z-10"
@@ -45,10 +47,11 @@ export default function QuoteModal({ isOpen, onClose }) {
                             <X className="w-4 h-4 text-slate-600" />
                         </button>
 
-                        <div className="p-2">
+                        {/* Scrollable form area */}
+                        <div className="p-2 overflow-y-auto flex-1"> {/* ← Key fix #2 */}
                             <iframe
                                 src="https://api.leadconnectorhq.com/widget/form/2Pg72GWSTVr4YrihjGkX"
-                                style={{ width: '100%', height: '600px', border: 'none' }}
+                                style={{ width: '100%', height: '600px', border: 'none', display: 'block' }}
                                 id="inline-2Pg72GWSTVr4YrihjGkX"
                                 data-layout="{'id':'INLINE'}"
                                 data-trigger-type="alwaysShow"
