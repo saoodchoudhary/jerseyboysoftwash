@@ -3,9 +3,10 @@ import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+
 export default function ContactSection({ onOpenQuote }) {
     return (
-        <section id="contact" className="py-20 lg:py-28 bg-white">
+        <section id="contact" className="py-20 lg:py-28 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -16,6 +17,7 @@ export default function ContactSection({ onOpenQuote }) {
                     <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Get In Touch</h2>
                     <p className="text-slate-500 text-lg max-w-xl mx-auto">Ready to get started? Reach out for a free quote or give us a call — we'd love to hear from you.</p>
                 </motion.div>
+
 
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Contact Info */}
@@ -53,6 +55,7 @@ export default function ContactSection({ onOpenQuote }) {
                             </div>
                         </div>
                     </motion.div>
+
 
                     {/* Quote CTA */}
                     <motion.div
