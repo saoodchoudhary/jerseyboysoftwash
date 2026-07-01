@@ -1,0 +1,16 @@
+{
+  "name": "Jersey Boys Soft Wash",
+  "short_name": "Jersey Boys",
+  "description": "Professional soft wash house washing & exterior cleaning in Monmouth & Ocean County, NJ.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E8A524",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}
